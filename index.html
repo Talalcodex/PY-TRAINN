@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>PY TRAINN — learn Python by training</title>
+<meta name="description" content="PY TRAINN is a gamified Python practice app: 30 topics, thousands of questions, a real sandboxed Python runner, XP, streaks and achievements." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" /></noscript>
+<link rel="stylesheet" href="css/app.min.css?v=15" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div id="loadBar" class="load-bar" aria-hidden="true"><i></i></div>
+
+<div id="boot" class="boot">
+  <div class="boot-logo">PY<span>TRAINN</span></div>
+  <div class="boot-bar"><i></i></div>
+  <p class="boot-note" id="bootNote">Waking up the snake…</p>
+  <p class="boot-ver">version <span data-ver>v15</span></p>
+</div>
+
+<div id="app" class="app" hidden>
+  <aside class="rail">
+    <a class="brand" href="#/home" aria-label="PY TRAINN home">
+      <span class="brand-mark">🐍</span>
+      <span class="brand-text">PY<b>TRAINN</b></span>
+    </a>
+    <nav class="rail-nav" id="railNav" aria-label="Main"></nav>
+    <div class="rail-foot">
+      <button class="theme-toggle" id="themeToggle" type="button" title="Switch theme">
+        <span class="tt-icon">🌙</span><span class="tt-label">Dark mode</span>
+      </button>
+      <button class="rail-profile" id="railProfile" type="button"></button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="menuBtn" type="button" aria-label="Menu">☰</button>
+      <div class="topbar-title" id="pageTitle">Home</div>
+      <span class="build-tag" id="buildTag" title="You are running this build"><span data-ver>v15</span></span>
+      <div class="stats" id="topStats"></div>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <nav class="tabbar" id="tabBar" aria-label="Main mobile"></nav>
+  </div>
+</div>
+
+<div id="toastHost" class="toast-host" aria-live="polite"></div>
+<div id="modalHost"></div>
+
+<script src="js/app.min.js?v=15" defer></script>
+</body>
+</html>
